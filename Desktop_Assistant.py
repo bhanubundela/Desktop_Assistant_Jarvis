@@ -65,8 +65,8 @@ def sendMail(to,content):
     server = sm.SMTP("smtp.gmail.com",587)
     server.starttls() #why is it used ?
     server.ehlo() #why is it used ?     When the STARTTLS command is used, the EHLO command must also be used.
-    server.login("b.bundela.8@gmail.com", "Bhanu@1992")
-    server.sendmail("b.bundela.8@gmail.com", to, content)
+    server.login("<mail-id-here>", "<password-here>")
+    server.sendmail("<mail-id-here>", to, content)
     server.close()
 
 if __name__=="__main__":
@@ -132,7 +132,7 @@ if __name__=="__main__":
                 # # speak("to whom you want to send this mail")
                 # to = takeCommand()
                 # print(to)
-                to = "bhanubundela007@gmail.com"
+                to = "<mail-id-here>"
                 sendMail(to,content)
                 speak("Mail has been sent")
             except Exception as e:
